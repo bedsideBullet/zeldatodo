@@ -1,0 +1,9 @@
+@font-face {
+	font-family: "Hylian";
+	src: url("./assets/fonts/HylianSerif.ttf") format("truetype");
+}
+
+body {
+	font-family: "Hylian", serif;
+	background-color: #fefae0;
+}
