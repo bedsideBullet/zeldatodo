@@ -129,7 +129,6 @@ button.btn-b {
 	align-items: center;
 	cursor: pointer;
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
-	box-shadow: 5px 8px 16px rgba(0, 0, 0, 0.75);
 }
 
 button.btn-b {
@@ -150,7 +149,6 @@ button.btn-b {
 	background-position: center;
 	background-size: contain;
 	border: none;
-	border-radius: 12px;
 	box-shadow: 5px 8px 16px rgba(0, 0, 0, 1);
 	color: #f0f00f;
 	text-shadow: 0 0 5px #000000;
