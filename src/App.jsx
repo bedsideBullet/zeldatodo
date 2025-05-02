@@ -25,16 +25,19 @@ export default function App() {
 				if (quest.id === id) {
 					const updatedQuest = { ...quest, completed: !quest.completed };
 
-					// 🎉 Trigger celebration only when marking a Main Quest complete
 					if (!quest.completed && quest.type === "Main Quest") {
 						Swal.fire({
 							title: "You did it!",
 							text: "A Main Quest is complete!",
-							imageUrl: sword, // import sword at top
+							imageUrl: sword,
 							imageWidth: 64,
 							imageHeight: 64,
 							imageAlt: "Master Sword",
-							confirmButtonText: "Victory!",
+							confirmButtonText: "",
+							customClass: {
+								confirmButton: "btn-circle",
+							},
+							buttonsStyling: false,
 						});
 					}
 
@@ -55,14 +58,27 @@ export default function App() {
 			text: "This will permanently remove all saved quests!",
 			icon: "warning",
 			showCancelButton: true,
-			confirmButtonColor: "#d33",
-			cancelButtonColor: "#3085d6",
-			confirmButtonText: "Yes, clear all!",
+			confirmButtonText: "",
+			cancelButtonText: "",
+			customClass: {
+				confirmButton: "btn-circle",
+				cancelButton: "btn-b",
+			},
+			buttonsStyling: false,
 		}).then((result) => {
 			if (result.isConfirmed) {
 				setQuests([]);
 				localStorage.removeItem("zelda-quests");
-				Swal.fire("Cleared!", "Your quest log has been reset.", "success");
+				Swal.fire({
+					title: "Cleared!",
+					text: "Your quest log has been reset.",
+					icon: "success",
+					confirmButtonText: "OK",
+					customClass: {
+						confirmButton: "btn-circle",
+					},
+					buttonsStyling: false,
+				});
 			}
 		});
 	};
@@ -70,12 +86,14 @@ export default function App() {
 	return (
 		<div className="container py-5">
 			<Header />
-			<QuestForm onAddQuest={handleAddQuest} />
-			<QuestList
-				quests={quests}
-				onToggle={handleToggleQuest}
-				onDelete={handleDeleteQuest}
-			/>
+			<div className="quest-wrapper mx-auto">
+				<QuestForm onAddQuest={handleAddQuest} />
+				<QuestList
+					quests={quests}
+					onToggle={handleToggleQuest}
+					onDelete={handleDeleteQuest}
+				/>
+			</div>
 
 			{quests.length > 0 && (
 				<div className="text-center mt-4">

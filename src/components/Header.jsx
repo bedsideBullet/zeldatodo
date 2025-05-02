@@ -1,17 +1,20 @@
 // src/components/Header.jsx
 import React from "react";
-import favicon from "../assets/icons/favicon.png";
+import king from "../assets/icons/king.png";
 
 export default function Header() {
 	return (
-		<div className="text-center mb-5">
+		<div className="text-center mb-5 ">
 			<img
-				src={favicon}
-				alt="favicon"
-				style={{ width: "64px", height: "64px" }}
+				src={king}
+				alt="king
+				"
+				style={{ width: "600px", height: "400px" }}
 			/>
-			<h1 className="display-5 mt-3">Zelda Quest Log</h1>
-			<p className="text-muted">Track your Main, Side, and Daily quests</p>
+
+			<p className="triforce-yellow h2">
+				Track your Main, Side, and Daily quests
+			</p>
 		</div>
 	);
 }

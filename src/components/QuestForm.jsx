@@ -1,5 +1,5 @@
-// src/components/QuestForm.jsx
 import React, { useState } from "react";
+import Swal from "sweetalert2";
 
 export default function QuestForm({ onAddQuest }) {
 	const [title, setTitle] = useState("");
@@ -12,6 +12,10 @@ export default function QuestForm({ onAddQuest }) {
 				icon: "error",
 				title: "Oops!",
 				text: "You must enter a quest title.",
+				customClass: {
+					confirmButton: "btn-circle",
+				},
+				buttonsStyling: false,
 			});
 			return;
 		}
@@ -29,18 +33,18 @@ export default function QuestForm({ onAddQuest }) {
 	};
 
 	return (
-		<form onSubmit={handleSubmit} className="mb-4">
-			<div className="row g-2">
+		<form onSubmit={handleSubmit} className="mb-4 add-quest">
+			<div className="row g-4 align-items-stretch">
 				<div className="col-md-6">
 					<input
 						type="text"
-						className="form-control"
+						className="form-control "
 						placeholder="Enter a new quest..."
 						value={title}
 						onChange={(e) => setTitle(e.target.value)}
 					/>
 				</div>
-				<div className="col-md-4">
+				<div className="col-md-4 ">
 					<select
 						className="form-select"
 						value={type}
@@ -52,10 +56,9 @@ export default function QuestForm({ onAddQuest }) {
 					</select>
 				</div>
 				<div className="col-md-2">
-					<button type="submit" className="btn btn-primary w-100">
-						Add
-					</button>
+					<button type="submit" className="btn btn-primary w-100"></button>
 				</div>
+				<div className="col-md-1"></div>
 			</div>
 		</form>
 	);

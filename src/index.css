@@ -1,9 +1,281 @@
-@font-face {
-	font-family: "Hylian";
-	src: url("./assets/fonts/HylianSerif.ttf") format("truetype");
+#root,
+#root * {
+	font-family: "Reggae One", cursive;
+	box-sizing: border-box;
+}
+
+.input-line {
+	display: flex;
+	flex-flow: nowrap;
 }
 
 body {
-	font-family: "Hylian", serif;
-	background-color: #fefae0;
+	margin: 0;
+	padding: 0;
+	background: url("./assets/icons/wwbg.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-family: "Reggae One", cursive;
+}
+
+.container {
+	background: url("./assets/icons/greenbg.png") no-repeat center center fixed;
+	background-size: 50%;
+	min-height: 100vh;
+}
+
+.add-quest {
+	display: flex;
+	justify-content: center;
+}
+
+.add-quest input,
+.add-quest select {
+	color: #f0f00f;
+	background-color: #1e1e1e;
+	border-color: #555;
+}
+
+.add-quest input::placeholder {
+	color: #f0f00f;
+	opacity: 1;
+}
+
+.add-quest input.form-control {
+	color: #f0f00f !important;
+	text-shadow: 0 0 5px #000000;
+}
+
+.triforce-yellow.h2 {
+	color: #f0f00f;
+	text-shadow: 0 0 5px #000000;
+}
+
+input.form-control,
+select.form-select {
+	background-image: url("./assets/icons/input-box.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: #f0f00f;
+	text-shadow: 0 0 5px #000000;
+	border: none;
+	border-radius: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 25px;
+	height: 75px;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+input.form-control:focus,
+select.form-select:focus {
+	outline: none;
+	transform: translateY(-2px);
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-group {
+	display: flex;
+	gap: 10px;
+}
+
+button.btn-primary {
+	background-image: url("./assets/icons/btn.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: none;
+	border-radius: 40px;
+	color: white;
+	font-size: 16px;
+	padding: 0;
+	width: 100%;
+	height: 75px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 75px;
+	background-color: transparent;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	box-shadow: 5px 8px 16px rgba(0, 0, 0, 0.75);
+}
+
+button.btn-primary:focus {
+	outline: none;
+}
+
+button.btn-circle,
+button.btn-b {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-image: url("./assets/icons/btn.png");
+	background-size: cover;
+	background-position: center;
+	border: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	box-shadow: 5px 8px 16px rgba(0, 0, 0, 0.75);
+}
+
+button.btn-b {
+	transform: scale(60%);
+	background-image: url("./assets/icons/b-btn.png");
+	margin-bottom: -5px;
+	padding-top: -5px;
+}
+
+.quest-wrapper {
+	max-width: 800px;
+	width: 100%;
+}
+
+.quest-wrapper .card {
+	background-image: url("./assets/icons/input-box.png");
+	background-repeat: repeat;
+	background-position: center;
+	background-size: contain;
+	border: none;
+	border-radius: 12px;
+	box-shadow: 5px 8px 16px rgba(0, 0, 0, 1);
+	color: #f0f00f;
+	text-shadow: 0 0 5px #000000;
+	margin-bottom: 1rem;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	border-radius: 0px;
+}
+
+.quest-wrapper .card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.75);
+}
+
+.quest-wrapper input,
+.quest-wrapper select {
+	background-image: url("./assets/icons/input-box.png");
+	background-repeat: repeat;
+	background-position: center;
+	background-size: cover;
+	border: none;
+	border-radius: 0px;
+	color: #f0f00f;
+	font-weight: bold;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	box-shadow: 5px 8px 16px rgba(0, 0, 0, 1);
+}
+
+.quest-wrapper input:focus,
+.quest-wrapper select:focus {
+	transform: translateY(-2px);
+	box-shadow: 5px 12px 24px rgba(0, 0, 0, 0.75);
+	outline: none;
+}
+
+.swal2-popup {
+	background-image: url("./assets/icons/input-box.png") !important;
+	background-repeat: repeat !important;
+	background-position: center !important;
+	background-size: contain !important;
+	border: none !important;
+	border-radius: 12px !important;
+	box-shadow: 5px 8px 16px rgba(0, 0, 0, 1) !important;
+	color: #f0f00f !important;
+	text-shadow: 0 0 5px #000000 !important;
+	font-family: "Reggae One", cursive !important;
+	padding: 20px !important;
+}
+
+.swal2-title {
+	color: #f0f00f !important;
+	text-shadow: 0 0 5px #000000 !important;
+	font-family: "Reggae One", cursive !important;
+	font-size: 24px !important;
+}
+
+.swal2-content {
+	color: #f0f00f !important;
+	text-shadow: 0 0 5px #000000 !important;
+	font-family: "Reggae One", cursive !important;
+	font-size: 18px !important;
+}
+
+.swal2-confirm.btn-circle {
+	width: 70px !important;
+	height: 70px !important;
+	border-radius: 50% !important;
+	background-image: url("./assets/icons/btn.png") !important;
+	background-size: cover !important;
+	background-position: center !important;
+	border: none !important;
+	padding: 0 !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	cursor: pointer !important;
+	transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+	box-shadow: 5px 8px 16px rgba(0, 0, 0, 0.75) !important;
+	color: #f0f00f !important;
+	text-shadow: 0 0 5px #000000 !important;
+	font-family: "Reggae One", cursive !important;
+	font-size: 16px !important;
+}
+
+.swal2-confirm.btn-circle:hover {
+	transform: translateY(-2px) !important;
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7) !important;
+}
+
+.swal2-cancel.btn-b {
+	width: 70px !important;
+	height: 70px !important;
+	border-radius: 50% !important;
+	background-image: url("./assets/icons/b-btn.png") !important;
+	background-size: cover !important;
+	background-position: center !important;
+	border: none !important;
+	padding: 0 !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	cursor: pointer !important;
+	transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+	box-shadow: 5px 8px 16px rgba(0, 0, 0, 0.75) !important;
+	color: #f0f00f !important;
+	text-shadow: 0 0 5px #000000 !important;
+	font-family: "Reggae One", cursive !important;
+	font-size: 16px !important;
+	transform: scale(0.6) !important;
+}
+
+.swal2-cancel.btn-b:hover {
+	transform: scale(0.6) translateY(-2px) !important;
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7) !important;
+}
+
+.swal2-actions {
+	display: flex !important;
+	gap: 10px !important;
+	justify-content: center !important;
+}
+
+.quest-wrapper .card h5 {
+	font-size: 1.5rem;
+}
+
+.quest-wrapper .card small {
+	font-size: 1rem;
 }
