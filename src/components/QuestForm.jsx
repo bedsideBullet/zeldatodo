@@ -12,6 +12,7 @@ export default function QuestForm({ onAddQuest }) {
 				icon: "error",
 				title: "Oops!",
 				text: "You must enter a quest title.",
+				confirmButtonText: "",
 				customClass: {
 					confirmButton: "btn-circle",
 				},
@@ -56,7 +57,7 @@ export default function QuestForm({ onAddQuest }) {
 					</select>
 				</div>
 				<div className="col-md-2">
-					<button type="submit" className="btn btn-primary w-100"></button>
+					<button type="submit" className="small-screen btn btn-primary "></button>
 				</div>
 				<div className="col-md-1"></div>
 			</div>

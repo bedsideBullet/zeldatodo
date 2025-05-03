@@ -58,6 +58,7 @@ export default function QuestItem({ quest, onToggle, onDelete }) {
 										title: "Deleted!",
 										text: "The quest is gone.",
 										icon: "success",
+										confirmButtonText: "",
 										customClass: {
 											confirmButton: "btn-circle",
 										},

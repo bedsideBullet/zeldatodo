@@ -73,7 +73,7 @@ export default function App() {
 					title: "Cleared!",
 					text: "Your quest log has been reset.",
 					icon: "success",
-					confirmButtonText: "OK",
+					confirmButtonText: "",
 					customClass: {
 						confirmButton: "btn-circle",
 					},
