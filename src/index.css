@@ -91,7 +91,7 @@ select.form-select:focus {
 }
 
 button.btn-primary {
-  background-image: url("./assets/icons/btn.png");
+  background-image: url("./assets/icons/a-btn.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -107,7 +107,6 @@ button.btn-primary {
   line-height: 75px;
   background-color: transparent;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 5px 8px 16px rgba(0, 0, 0, 0.75);
 }
 
 button.btn-primary:focus {
@@ -119,7 +118,7 @@ button.btn-b {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-image: url("./assets/icons/btn.png");
+  background-image: url("./assets/icons/a-btn.png");
   background-size: cover;
   background-position: center;
   border: none;
@@ -218,7 +217,7 @@ button.btn-b {
   width: 70px !important;
   height: 70px !important;
   border-radius: 50% !important;
-  background-image: url("./assets/icons/btn.png") !important;
+  background-image: url("./assets/icons/a-btn.png") !important;
   background-size: cover !important;
   background-position: center !important;
   border: none !important;
@@ -254,7 +253,6 @@ button.btn-b {
   align-items: center !important;
   cursor: pointer !important;
   transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-  box-shadow: 5px 8px 16px rgba(0, 0, 0, 0.75) !important;
   color: #f0f00f !important;
   text-shadow: 0 0 5px #000000 !important;
   font-family: "Reggae One", cursive !important;
